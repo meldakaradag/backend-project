@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "5e9bdd8a-866c-4db3-8a50-f3ca8b7e0acd",
+		"name": "postman-requests-backend-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Subscribers with REST API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/subscriber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Subscribers with REST API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/subscriber/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subscriber",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subscriber by id with REST API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/subscriber/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subscriber",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Subscriber with REST API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"name\":\"Alice Gracy\",\r\n    \"msisdn\":\"905552551133\",\r\n    \"status\":\"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subscriber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Subscriber with REST API",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Melda Gracy\",\r\n    \"msisdn\": \"905549290499\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/subscriber/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subscriber",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Subscriber by id with REST API",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/subscriber/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subscriber",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subscriber by id with SOAP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:us=\"GeneratedSOAPClasses\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <us:getSubscriberRequest>\r\n            <us:id>14</us:id>\r\n        </us:getSubscriberRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/soapWS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soapWS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Subscribers with SOAP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:us=\"GeneratedSOAPClasses\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <us:getSubscribersRequest>\r\n        </us:getSubscribersRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soapWS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soapWS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Subscribers with SOAP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:us=\"GeneratedSOAPClasses\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <us:getActiveSubscribersRequest>\r\n        </us:getActiveSubscribersRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/soapWS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soapWS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Subscriber with SOAP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:us=\"GeneratedSOAPClasses\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <us:addSubscriberRequest>\r\n                <us:name>Glory Wisdom</us:name>\r\n                <us:msisdn>905552551144</us:msisdn>\r\n                <us:status>DEACTIVED</us:status>\r\n        </us:addSubscriberRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soapWS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soapWS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subscriber by id with SOAP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:us=\"GeneratedSOAPClasses\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <us:updateSubscriberRequest>\r\n            <us:id>14</us:id>\r\n            <us:Subscriber>\r\n                <us:name>Glory Wisdom</us:name>\r\n                <us:msisdn>905552551144</us:msisdn>\r\n                <us:status>DEACTIVE</us:status>\r\n            </us:Subscriber>\r\n        </us:updateSubscriberRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/soapWS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soapWS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Subscriber by id with SOAP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n                  xmlns:us=\"GeneratedSOAPClasses\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <us:deleteSubscriberRequest>\r\n            <us:id>120</us:id>\r\n        </us:deleteSubscriberRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/soapWS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soapWS"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
