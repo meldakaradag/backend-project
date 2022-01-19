@@ -5,7 +5,7 @@ There is also log file. In case of desire of application.proporties file you can
 
 ## HOW TO INSTALL AND RUN
 Anyone can clone repository or download the zip file. Also there should be PostgreSQL on your computer.
-Create database name "SWAInternalHw". And run the script below.
+Create database name "backend". And run the script below.
 ```sql
 CREATE TABLE subscriber (
 	id bigint SERIAL PRIMARY KEY,
